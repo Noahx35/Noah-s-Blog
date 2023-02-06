@@ -1,0 +1,9 @@
+---
+title: "Tip Sheet Week 2"
+author: "Noah"
+date: "2023-01-02"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+Date: 02/06/23
