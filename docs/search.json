@@ -39,6 +39,6 @@
     "href": "posts/TIP Sheet Wk 2/index.html",
     "title": "Tip Sheet Week 2",
     "section": "",
-    "text": "Date: 02/06/23\nHow to commit and push changes to GitHub:\n\nMake changes to file\nRender the website in R Studio\nCommit the changes in GitHub desktop with a commit message\nPush to github.com"
+    "text": "Date: 02/06/23\nHow to commit and push changes to GitHub:\n\nMake changes to file\nRender the website in R Studio\nCommit the changes in GitHub desktop with a commit message\nPush to github.com\n\n(You can use R Studio as well)\nCan enter a package without enabling it by using ::\nbeepr::beep()\nInputs to functions\nbeep (sound = 8, expr = NULL)"
   }
 ]

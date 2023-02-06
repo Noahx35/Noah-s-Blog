@@ -14,3 +14,13 @@ How to commit and push changes to GitHub:
 2.  Render the website in R Studio
 3.  Commit the changes in GitHub desktop with a commit message
 4.  Push to github.com
+
+(You can use R Studio as well)
+
+Can enter a package without enabling it by using ::
+
+beepr::beep()
+
+Inputs to functions
+
+beep (sound = 8, expr = NULL)
