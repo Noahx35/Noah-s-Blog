@@ -7,3 +7,10 @@ image: "image.jpg"
 ---
 
 Date: 02/06/23
+
+How to commit and push changes to GitHub:
+
+1.  Make changes to file
+2.  Render the website in R Studio
+3.  Commit the changes in GitHub desktop with a commit message
+4.  Push to github.com
