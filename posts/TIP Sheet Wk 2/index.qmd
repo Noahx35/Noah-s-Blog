@@ -24,3 +24,15 @@ beepr::beep()
 Inputs to functions
 
 beep (sound = 8, expr = NULL)
+
+Date: 02/08/23
+
+Use help to load the help file for functions or ?function_name Ex. ?mean to find mean function
+
+??function_name look for functions inside of packages you have not loaded Ex. ??Mean
+
+help ("mean", package="base")
+
+c() funtion in R my
+
+mean(as.numeric(c("1","2","3"))

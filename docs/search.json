@@ -21,6 +21,13 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
+    "objectID": "posts/TIP Sheet Wk 2/index.html",
+    "href": "posts/TIP Sheet Wk 2/index.html",
+    "title": "Tip Sheet Week 2",
+    "section": "",
+    "text": "Date: 02/06/23\nHow to commit and push changes to GitHub:\n\nMake changes to file\nRender the website in R Studio\nCommit the changes in GitHub desktop with a commit message\nPush to github.com\n\n(You can use R Studio as well)\nCan enter a package without enabling it by using ::\nbeepr::beep()\nInputs to functions\nbeep (sound = 8, expr = NULL)\nDate: 02/08/23\nUse help to load the help file for functions or ?function_name Ex. ?mean to find mean function\n??function_name look for functions inside of packages you have not loaded Ex. ??Mean\nhelp (“mean”, package=“base”)\nc() funtion in R my\nmean(as.numeric(c(“1”,“2”,“3”))"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Noah’s Blog",
@@ -33,12 +40,5 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
-  },
-  {
-    "objectID": "posts/TIP Sheet Wk 2/index.html",
-    "href": "posts/TIP Sheet Wk 2/index.html",
-    "title": "Tip Sheet Week 2",
-    "section": "",
-    "text": "Date: 02/06/23\nHow to commit and push changes to GitHub:\n\nMake changes to file\nRender the website in R Studio\nCommit the changes in GitHub desktop with a commit message\nPush to github.com\n\n(You can use R Studio as well)\nCan enter a package without enabling it by using ::\nbeepr::beep()\nInputs to functions\nbeep (sound = 8, expr = NULL)"
   }
 ]
