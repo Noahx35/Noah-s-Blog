@@ -1,0 +1,76 @@
+---
+title: "Week 3 Basic Skills"
+---
+
+### **Basic Skills for this section**
+
+1.  Be able to make a new .qmd document
+
+-   Copy a folder, and use a copied .qmd. Provides top lvl yml or use the green plus and press quarto docs but you start off blank. to ass yml
+
+-   start with 3 dashes "\-\--" , add title and author then end with "\-\--"
+
+2.  Be able to render a .qmd document
+
+Explain the difference between the source editor view and visual editor view in Rstudio.
+
+**Difference between *Source* and *Visual*** **in R**
+
+The source view is plain text, will be displayed exactly as it is with all the characters.
+
+With Visual it interpenetrates it as markdown text it shows the formatted markdown text instead of the plain text.Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
+
+3.  Be aware of resources to help you learn more about markdown options.
+
+*Italics* **BOLD** superscript^2^ and subscript~2~ \~\~StrikeThrough\~\~
+
+4.  Be able to insert an R code chunk, and show the output in the rendered document.
+
+-   macro for quick insert
+
+-   Three back ticks
+
+-   \`\`\``Shows up in a slightly different font`\`\`\` produces a gray square
+
+-   To get a code block use the following to get a code block:
+
+Command + Option + i or \`\`\``r`\`\`\`
+
+```{r}
+
+1+1
+
+"use /n to start a new line in a string"
+```
+
+6.  Running R code chunks in a qmd
+
+Control return or control enter only runs a single line you selected
+
+```{r}
+#| echo: true
+#| eval: false
+1:20
+
+
+```
+
+=<!-- -->
+
+-   pressing play
+
+-   copy/paste into console
+
+-   highlight then command-enter (mac)
+
+precedence issues (first to last)
+
+8.  Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
+
+-   Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
+
+-   Write inline r code.
+
+-   Explain how the rendering environment is different from the Rstudio environment.
+
+-   Be aware of more advanced quarto options for html documents, and try some of the options.
