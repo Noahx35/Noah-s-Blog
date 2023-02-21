@@ -67,10 +67,10 @@ precedence issues (first to last)
 
 8.  Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
 
--   Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
+9.  Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
 
--   Write inline r code.
+10.   Write inline r code.
 
--   Explain how the rendering environment is different from the Rstudio environment.
+11.   Explain how the rendering environment is different from the Rstudio environment.
 
--   Be aware of more advanced quarto options for html documents, and try some of the options.
+12.   Be aware of more advanced quarto options for html documents, and try some of the options.
