@@ -4,7 +4,7 @@
     "href": "posts/Week 3 Basic Skills/Index.html",
     "title": "Week 3 Basic Skills",
     "section": "",
-    "text": "Basic Skills for this section\n\nBe able to make a new .qmd document\n\n\nCopy a folder, and use a copied .qmd. Provides top lvl yml or use the green plus and press quarto docs but you start off blank. to ass yml\nstart with 3 dashes “---” , add title and author then end with “---”\n\n\nBe able to render a .qmd document\n\nExplain the difference between the source editor view and visual editor view in Rstudio.\nDifference between Source and Visual in R\nThe source view is plain text, will be displayed exactly as it is with all the characters.\nWith Visual it interpenetrates it as markdown text it shows the formatted markdown text instead of the plain text.Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n\nBe aware of resources to help you learn more about markdown options.\n\nItalics BOLD superscript2 and subscript2 ~~StrikeThrough~~\n\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\nThree back ticks\n```Shows up in a slightly different font``` produces a gray square\nTo get a code block use the following to get a code block:\n\nCommand + Option + i or ```r```\n\n1+1\n\n[1] 2\n\n\"use /n to start a new line in a string\"\n\n[1] \"use /n to start a new line in a string\"\n\n\n\nRunning R code chunks in a qmd\n\nControl return or control enter only runs a single line you selected\n\n1:20\n\n=\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\n\nprecedence issues (first to last)\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\nWrite inline r code.\nExplain how the rendering environment is different from the Rstudio environment.\nBe aware of more advanced quarto options for html documents, and try some of the options."
+    "text": "Be able to make a new .qmd document\n\n\nCopy a folder, and use a copied .qmd. Provides top lvl yml or use the green plus and press quarto docs but you start off blank. to ass yml\nstart with 3 dashes “---” , add title and author then end with “---\n\n\n\nBe able to render a .qmd document\n\n\nPress render at the top of the screen besides the magnifying glass icon.\n\n\n\nExplain the difference between the source editor view and visual editor view in Rstudio.\n\nDifference between Source and Visual in R\n\nThe source view is plain text, will be displayed exactly as it is with all the characters.\nWith Visual it interpenetrates it as markdown text it shows the formatted markdown text instead of the plain text.Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n\n\n\nBe able to insert simple markdown plain text (headers, lists, paragraphs), and render the document."
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -39,7 +39,7 @@
     "href": "index.html",
     "title": "Noah’s Blog",
     "section": "",
-    "text": "Week 4 Data Vis\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3 Basic Skills\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 29, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nMy new post\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2023\n\n\nNoah\n\n\n\n\n\n\n  \n\n\n\n\nTip Sheet Week 2\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2023\n\n\nNoah\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 4 Data Vis\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nWeek 3 Basic Skills\n\n\n\n\n\n\n\n\n\n\n\n\nNoah\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 29, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nMy new post\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2023\n\n\nNoah\n\n\n\n\n\n\n  \n\n\n\n\nTip Sheet Week 2\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2023\n\n\nNoah\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -54,5 +54,47 @@
     "title": "Week 4 Data Vis",
     "section": "",
     "text": "Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge\nTidy Data: Show that you understand what this means. Give an example of data this is in tidy format, and data that is not.\nggplot2: We will continue learning about this across the semester. Show at a minimum that you can make a graph and add it to your blog. Try examples from the textbook. Show that you understand the layer concept. Identify aspects that are confusing to you so we can discuss them in class.\n\n\n#run in console\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0     ✔ purrr   1.0.1\n✔ tibble  3.1.8     ✔ dplyr   1.1.0\n✔ tidyr   1.3.0     ✔ stringr 1.5.0\n✔ readr   2.1.3     ✔ forcats 1.0.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nstarwars_copy <- starwars\n\n# Check out some of the data types\nhead(starwars_copy) \n\n# A tibble: 6 × 14\n  name         height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵\n  <chr>         <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>  \n1 Luke Skywal…    172    77 blond   fair    blue       19   male  mascu… Tatooi…\n2 C-3PO           167    75 <NA>    gold    yellow    112   none  mascu… Tatooi…\n3 R2-D2            96    32 <NA>    white,… red        33   none  mascu… Naboo  \n4 Darth Vader     202   136 none    white   yellow     41.9 male  mascu… Tatooi…\n5 Leia Organa     150    49 brown   light   brown      19   fema… femin… Aldera…\n6 Owen Lars       178   120 brown,… light   blue       52   male  mascu… Tatooi…\n# … with 4 more variables: species <chr>, films <list>, vehicles <list>,\n#   starships <list>, and abbreviated variable names ¹​hair_color, ²​skin_color,\n#   ³​eye_color, ⁴​birth_year, ⁵​homeworld\n\nclass(starwars_copy$name)\n\n[1] \"character\"\n\nclass(starwars_copy$height)\n\n[1] \"integer\"\n\n#plot some of the variables\nggplot(data = starwars_copy,\n  mapping = aes (x= height, y = mass) )+ \n  geom_point()\n\nWarning: Removed 28 rows containing missing values (`geom_point()`)."
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#second-level-header",
+    "href": "posts/Week 3 Basic Skills/Index.html#second-level-header",
+    "title": "Week 3 Basic Skills",
+    "section": "Second Level Header",
+    "text": "Second Level Header\n\nHere is some plan text\n\n\n\nBe aware of resources to help you learn more about markdown options.\n\n\nItalics BOLD superscript2 and subscript2 ~~StrikeThrough~~\nhttps://noahx35.github.io/Noah-s-Blog/\nNoah’s Blog\n\n\n\n\nCaption\n\n\n\n\nCharacteristics of elephants\n\nThey are large\nHave legs\n\nfour legs\n\n\n\n\n\n\n\n\n\n\n6. Be able to insert an R code chunk, and show the output in the rendered document.\n\n\n::: {.cell}\n\n\n{.r .cell-code} 1+1\n\n\n::: {.cell-output .cell-output-stdout}\n\n\n- macro for quick insert\n\n\n- Three back ticks\n\n\n- ```Shows up in a slightly different font``` produces a gray square\n\n\n- To get a code block use the following to get a code block:\n\n\nCommand + Option + i or ```r```\n\n\n::: {.cell}\n\n\n{.r .cell-code} 1+1\n\n\n::: {.cell-output .cell-output-stdout}\n\n\n{.r .cell-code} \"use /n to start a new line in a string\"\n\n\n::: {.cell-output .cell-output-stdout}\n\n\nprecedence issues (first to last)\n\n\n\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n\n\n#| eval: true\n#| echo: true\n#| error: true\nhist(mtcars$mpg)\n\n\n\n\n\n\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n\nThe value of c is 1\n\n\nWrite inline r code.\n\n\n\nExplain how the rendering environment is different from the Rstudio environment.\n\n\n\nBe aware of more advanced quarto options for html documents, and try some of the options."
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#caption",
+    "href": "posts/Week 3 Basic Skills/Index.html#caption",
+    "title": "Week 3 Basic Skills",
+    "section": "",
+    "text": "Be able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\nThree back ticks\n```Shows up in a slightly different font``` produces a gray square\nTo get a code block use the following to get a code block:\n\nCommand + Option + i or ```r```\n\n1+1\n\n[1] 2\n\n\"use /n to start a new line in a string\"\n\n[1] \"use /n to start a new line in a string\"\n\n\n\n\n\n\n\n\n7. Running R code chunks in a qmdControl return or control enter only runs a single line you selected{r} #| echo: true #| eval: false 1:20\n\n\n\n\n8. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo."
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#be-able-to-set-code-chunk-options-per-chunk-andor-for-the-whole-document.-understand-rules-for-precedence-which-options-will-apply-if-both-are-set.",
+    "href": "posts/Week 3 Basic Skills/Index.html#be-able-to-set-code-chunk-options-per-chunk-andor-for-the-whole-document.-understand-rules-for-precedence-which-options-will-apply-if-both-are-set.",
+    "title": "Week 3 Basic Skills",
+    "section": "9. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)",
+    "text": "9. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)"
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#write-inline-r-code.",
+    "href": "posts/Week 3 Basic Skills/Index.html#write-inline-r-code.",
+    "title": "Week 3 Basic Skills",
+    "section": "10. Write inline r code.",
+    "text": "10. Write inline r code."
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#explain-how-the-rendering-environment-is-different-from-the-rstudio-environment.",
+    "href": "posts/Week 3 Basic Skills/Index.html#explain-how-the-rendering-environment-is-different-from-the-rstudio-environment.",
+    "title": "Week 3 Basic Skills",
+    "section": "11. Explain how the rendering environment is different from the Rstudio environment.",
+    "text": "11. Explain how the rendering environment is different from the Rstudio environment.\n\nBe aware of more advanced quarto options for html documents, and try some of the options."
+  },
+  {
+    "objectID": "posts/Week 3 Basic Skills/Index.html#be-aware-of-r-code-chunk-options-and-how-to-use-eval-messages-error-warning-and-echo.",
+    "href": "posts/Week 3 Basic Skills/Index.html#be-aware-of-r-code-chunk-options-and-how-to-use-eval-messages-error-warning-and-echo.",
+    "title": "Week 3 Basic Skills",
+    "section": "8. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.",
+    "text": "8. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo."
   }
 ]
