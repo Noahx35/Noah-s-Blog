@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Noah’s Blog - Week 3 Basic Skills</title>
+<title>Noah’s Blog - Week 4 Data Vis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,7 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Week 3 Basic Skills</h1>
+      <h1 class="title">Week 4 Data Vis</h1>
                       </div>
   </div>
     
@@ -189,67 +189,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="basic-skills-for-this-section" class="level3">
-<h3 class="anchored" data-anchor-id="basic-skills-for-this-section"><strong>Basic Skills for this section</strong></h3>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
 <ol type="1">
-<li>Be able to make a new .qmd document</li>
+<li><p>Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge</p></li>
+<li><p>Tidy Data: Show that you understand what this means. Give an example of data this is in tidy format, and data that is not.</p></li>
+<li><p>ggplot2: We will continue learning about this across the semester. Show at a minimum that you can make a graph and add it to your blog. Try examples from the textbook. Show that you understand the layer concept. Identify aspects that are confusing to you so we can discuss them in class.</p></li>
 </ol>
-<ul>
-<li><p>Copy a folder, and use a copied .qmd. Provides top lvl yml or use the green plus and press quarto docs but you start off blank. to ass yml</p></li>
-<li><p>start with 3 dashes “---” , add title and author then end with “---”</p></li>
-</ul>
-<ol start="2" type="1">
-<li>Be able to render a .qmd document</li>
-</ol>
-<p>Explain the difference between the source editor view and visual editor view in Rstudio.</p>
-<p><strong>Difference between <em>Source</em> and <em>Visual</em></strong> <strong>in R</strong></p>
-<p>The source view is plain text, will be displayed exactly as it is with all the characters.</p>
-<p>With Visual it interpenetrates it as markdown text it shows the formatted markdown text instead of the plain text.Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.</p>
-<ol start="3" type="1">
-<li>Be aware of resources to help you learn more about markdown options.</li>
-</ol>
-<p><em>Italics</em> <strong>BOLD</strong> superscript<sup>2</sup> and subscript<sub>2</sub> ~~StrikeThrough~~</p>
-<ol start="4" type="1">
-<li>Be able to insert an R code chunk, and show the output in the rendered document.</li>
-</ol>
-<ul>
-<li><p>macro for quick insert</p></li>
-<li><p>Three back ticks</p></li>
-<li><p>```<code>Shows up in a slightly different font</code>``` produces a gray square</p></li>
-<li><p>To get a code block use the following to get a code block:</p></li>
-</ul>
-<p>Command + Option + i or ```<code>r</code>```</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run in console</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.0     ✔ purrr   1.0.1
+✔ tibble  3.1.8     ✔ dplyr   1.1.0
+✔ tidyr   1.3.0     ✔ stringr 1.5.0
+✔ readr   2.1.3     ✔ forcats 1.0.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>starwars_copy <span class="ot">&lt;-</span> starwars</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check out some of the data types</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(starwars_copy) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code># A tibble: 6 × 14
+  name         height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+  &lt;chr&gt;         &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+1 Luke Skywal…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+2 C-3PO           167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+3 R2-D2            96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+4 Darth Vader     202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+5 Leia Organa     150    49 brown   light   brown      19   fema… femin… Aldera…
+6 Owen Lars       178   120 brown,… light   blue       52   male  mascu… Tatooi…
+# … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+#   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
+#   ³​eye_color, ⁴​birth_year, ⁵​homeworld</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">"use /n to start a new line in a string"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(starwars_copy<span class="sc">$</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "use /n to start a new line in a string"</code></pre>
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(starwars_copy<span class="sc">$</span>height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "integer"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot some of the variables</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> starwars_copy,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span> (<span class="at">x=</span> height, <span class="at">y =</span> mass) )<span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 28 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<ol start="6" type="1">
-<li>Running R code chunks in a qmd</li>
-</ol>
-<p>Control return or control enter only runs a single line you selected</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>=<!-- --></p>
-<ul>
-<li><p>pressing play</p></li>
-<li><p>copy/paste into console</p></li>
-<li><p>highlight then command-enter (mac)</p></li>
-</ul>
-<p>precedence issues (first to last)</p>
-<ol start="8" type="1">
-<li><p>Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.</p></li>
-<li><p>Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)</p></li>
-<li><p>Write inline r code.</p></li>
-<li><p>Explain how the rendering environment is different from the Rstudio environment.</p></li>
-<li><p>Be aware of more advanced quarto options for html documents, and try some of the options.</p></li>
-</ol>
 
 
 </section>

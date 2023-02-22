@@ -1,0 +1,43 @@
+---
+title: "Week 4 Data Vis"
+---
+
+### 
+
+1.  Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge
+
+2.  Tidy Data: Show that you understand what this means. Give an example of data this is in tidy format, and data that is not.
+
+3.  ggplot2: We will continue learning about this across the semester. Show at a minimum that you can make a graph and add it to your blog. Try examples from the textbook. Show that you understand the layer concept. Identify aspects that are confusing to you so we can discuss them in class.
+
+```{r}
+#run in console
+library(tidyverse)
+
+starwars_copy <- starwars
+
+# class function gives you the data type
+# Check out some of the data types
+head(starwars_copy) 
+class(starwars_copy$name)
+class(starwars_copy$height)
+
+#plot some of the variables
+ggplot(data = starwars_copy,
+  mapping = aes (x= height, y = mass) )+ 
+  geom_point()
+```
+```{r}
+typeof(10.02454353424)
+typeof(10L)
+typeof(10)
+```
+```{r}
+#Nominal
+typeof("1")
+#
+z
+```
+
+
+
