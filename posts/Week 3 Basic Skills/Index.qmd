@@ -120,6 +120,9 @@ The value of c is `r c `
 
 10. Write inline r code.
 
+`r c=1`
+
+The value of c is `r c `
 ----
 
 11. Explain how the rendering environment is different from the Rstudio environment.

@@ -1,0 +1,99 @@
+---
+title: "Week 5 Data Import "
+author: "Noah"
+eval: true
+echo: true
+---
+
+# Week 5 Assignment
+
+###"Write your blog post, and submit the link to this assignment on blackboard. Blog post ideas will be discussed in class, and this assignment will be updated for clarity.
+
+```{r setup, include=FALSE}
+
+library(tidyverse)     # includes readr & tibble
+library(rio)           # for almost any data import/export
+library(haven)         # for SPSS, Stata,and SAS files
+library(readxl)        # for Excel files
+library(googlesheets4) # for Google Sheets
+
+```
+###Ways to view your dATA
+```{r}
+#data() , allows you to view all the data sets
+#view(cars) , allows you to view specific data sets
+#print(cars) , it prints the data to the console
+#glimpse(cars) , gives you a small preview of the first 10-20 data points
+#head(cars) , gives you a table format of the first 10-20 data points
+#summary(cars), gives basic info min, max, mean, median, 1st ,and 3rd interquartile range
+```
+###Summarytools
+```{r}
+#library(summarytools)
+# Error in loading"
+```
+### Importing data
+```{r}
+library(rio)
+
+demo_tsv <- import(file = "data/demo.tsv") # Tab seperate factor
+demo_csv  <- import("data/demo.csv")  # comma-separated values
+demo_xls  <- import("data/demo.xlsx") # Excel format
+demo_sav  <- import("data/demo.sav")  # SPSS format
+
+glimpse(demo_tsv)
+
+demo_tsv$character # does not have the concept of levels
+demo_tsv$dactor # has the concept of levels
+
+
+```
+```{r}
+#Using the spec() function allows you to change or treat things as they come in.
+demo<- readr::read_csv("data/demo.csv")
+corrected_cols <- cols(
+  character = col_character(),
+  factor = col_factor(levels = c("low", "med", "high")), # specify the order you want
+  integer = col_integer(),
+  double = col_double(),
+  logical = col_logical(),
+  date = col_date(format = "%Y-%m-%d")
+)
+
+demo <- readr::read_csv("data/demo.csv", col_types = corrected_cols)
+spec(demo)
+
+glimpse(demo)
+```
+
+###Google Sheet
+Load Google SHeet
+```{r}
+gs4_deauth() # skip authorisation for public data
+
+demo_gs4  <- googlesheets4::read_sheet(
+  ss = "16dkq0YL0J7fyAwT1pdgj1bNNrheckAU_2-DKuuM6aGI"
+)
+```
+
+### Creating Data 
+
+```{r}
+avatar <- tibble( 
+  name = c("Katara", "Toph", "Sokka"), # char string 
+  bends = c("water", "earth", NA),
+  friendly = TRUE,
+  numbers = c(1,2,3),
+  more_numbers = 1:3,
+  even_more= seq(1,2,3)
+)
+
+# print it
+avatar
+```
+###Export Data
+```{r}
+#export(avatar, "data/avatar.csv")
+```
+
+###Writing Data
