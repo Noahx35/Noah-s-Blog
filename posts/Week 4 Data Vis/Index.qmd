@@ -27,11 +27,13 @@ ggplot(data = starwars_copy,
   mapping = aes (x= height, y = mass) )+ 
   geom_point()
 ```
+
 ```{r}
 typeof(10.02454353424)
 typeof(10L)
 typeof(10)
 ```
+
 ```{r}
 #Nominal
 typeof("1")
@@ -39,6 +41,7 @@ typeof("1")
 ```
 
 Date: 02/22/23
+
 ```{r}
 # Assign 1 to object named a
 a <- 1
@@ -46,13 +49,16 @@ a <- 1
 #Will change the interger into a character
 as.character(1)
 ```
+
 ### VECTOR
+
 ```{r}
 ONE_THING <- 1
 TWO_THINGS <- 1:2
 ```
 
 ## Data.frame
+
 ```{r}
 my_df <- data.frame(a=1:5,
                     b = c ("one", "two", "three", "four", "five"),
@@ -60,20 +66,24 @@ my_df <- data.frame(a=1:5,
 #print to view
 my_df
 ```
+
 ```{r}
 #Access parts of the table
 my_df[1,] # row 1, all columns
 my_df[,1] # column 1, all rows
 my_df[1:2,3] # row 1 and 2 and column 3
 ```
+
 #ggplot
+
 ```{r}
 survey_data <- read_csv("https://psyteachr.github.io/ads-v2/data/survey_data.csv")
 head(survey_data)
 library(tidyverse)
 
-ggplot()
 
+ggplot()
+#| fig-width 250
 #ggplot(data=survey_data,
        #mapping = aes(x= wait_time, y=satisfaction))
 #same as above
@@ -82,11 +92,5 @@ ggplot(survey_data,aes(x= wait_time, y=satisfaction,)) + geom_point(color="black
 ggplot(survey_data,aes(x= wait_time, y=satisfaction, color= satisfaction)) +geom_point()
 ```
 
-
-###Histograms
-```{r}
-ggplot(survey_data, aes(x= wait_time))+ geom_histogram() + ge
+```{}
 ```
-
-
-
