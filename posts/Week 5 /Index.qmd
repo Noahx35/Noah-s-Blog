@@ -7,7 +7,7 @@ echo: true
 
 # Week 5 Assignment
 
-###"Write your blog post, and submit the link to this assignment on blackboard. Blog post ideas will be discussed in class, and this assignment will be updated for clarity.
+\###"Write your blog post, and submit the link to this assignment on blackboard. Blog post ideas will be discussed in class, and this assignment will be updated for clarity.
 
 ```{r setup, include=FALSE}
 
@@ -18,7 +18,9 @@ library(readxl)        # for Excel files
 library(googlesheets4) # for Google Sheets
 
 ```
+
 ###Ways to view your dATA
+
 ```{r}
 #data() , allows you to view all the data sets
 #view(cars) , allows you to view specific data sets
@@ -27,12 +29,16 @@ library(googlesheets4) # for Google Sheets
 #head(cars) , gives you a table format of the first 10-20 data points
 #summary(cars), gives basic info min, max, mean, median, 1st ,and 3rd interquartile range
 ```
+
 ###Summarytools
+
 ```{r}
 #library(summarytools)
 # Error in loading"
 ```
+
 ### Importing data
+
 ```{r}
 library(rio)
 
@@ -48,6 +54,7 @@ demo_tsv$dactor # has the concept of levels
 
 
 ```
+
 ```{r}
 #Using the spec() function allows you to change or treat things as they come in.
 demo<- readr::read_csv("data/demo.csv")
@@ -66,8 +73,8 @@ spec(demo)
 glimpse(demo)
 ```
 
-###Google Sheet
-Load Google SHeet
+###Google Sheet Load Google SHeet
+
 ```{r}
 gs4_deauth() # skip authorisation for public data
 
@@ -76,7 +83,7 @@ demo_gs4  <- googlesheets4::read_sheet(
 )
 ```
 
-### Creating Data 
+### Creating Data
 
 ```{r}
 avatar <- tibble( 
@@ -91,7 +98,9 @@ avatar <- tibble(
 # print it
 avatar
 ```
+
 ###Export Data
+
 ```{r}
 #export(avatar, "data/avatar.csv")
 ```

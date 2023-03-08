@@ -1,11 +1,121 @@
 ---
-title: "My new post"
+title: "Week 6 Data Summary"
 author: "Noah"
-date: "2023-01-02"
+date: "2023-06-03"
 categories: [news, code, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
+```{r setup, include=FALSE}
 
-This is my new post
+library(tidyverse)   # data wrangling functions
+library(rtweet)      # for searching tweets
+library(kableExtra)  # for nice tables
+
+```
+
+```{r}
+tweets <- readRDS("ncod_tweets.rds")
+```
+
+```{r}
+library(tidyverse)
+
+hist(tweets$favorite_count)
+
+```
+
+```{r}
+ggplot(tweets, aes(x=favorite_count)) + 
+  geom_histogram()
+```
+
+```{r}
+library(dplyr)
+
+filtered_data <- tweets%>%
+  filter(favorite_count<25)
+ggplot(filtered_data, aes(x=favorite_count)) + 
+  geom_histogram()
+```
+
+```{r}
+favourite_summary <- summarise(tweets,
+                           mean_favs = mean(favorite_count),
+                           median_favs = median(favorite_count),
+                           min_favs = min(favorite_count),
+                           max_favs = max(favorite_count))
+                          
+                        
+```
+
+###Log Scale
+
+```{r}
+ggplot(tweets, aes(x = favorite_count)) +
+  geom_histogram(bins = 25) +
+  scale_x_continuous(trans = "pseudo_log", 
+                     breaks = c(0, 1, 10, 100, 1000, 10000))
+```
+
+```{r}
+tweet_summary <- tweets %>%
+  summarise(mean_favs = mean(favorite_count),
+            median_favs = quantile(favorite_count, .5),
+            n = n(),
+            min_date = min(created_at),
+            max_date = max(created_at))
+
+glimpse(tweet_summary)
+```
+
+```{r}
+#tweets$favorite_count
+
+tweets$source[25]
+
+tweets$text[54]
+```
+
+```{r}
+tweet_summary <- tweets %>%
+  summarise(mean_favs = mean(favorite_count),
+            median_favs = quantile(favorite_count, .5),
+            n = n(),
+            min_date = min(created_at),
+            max_date = max(created_at))
+
+glimpse(tweet_summary)
+```
+
+###Inline coding
+
+```{r}
+date_from <- tweet_summary$min_date %>% 
+  format("%d %B, %Y")
+date_to <- tweet_summary$max_date %>% 
+  format("%d %B, %Y")
+```
+
+There were `r tweet_summary$n` tweets between `r date_from` and `r date_to`.
+
+```{r}
+tweets_per_user <- tweets %>%
+  count(screen_name, sort = TRUE)
+
+(tweets_per_user)
+
+```
+
+```{r}
+tweets_grouped <- tweets %>%
+  group_by(verified)
+
+verified <- tweets_grouped %>%
+  summarise(count = n(),
+            mean_favs = mean(favorite_count),
+            mean_retweets = mean(retweet_count)) %>%
+  ungroup()
+
+verified
+```
