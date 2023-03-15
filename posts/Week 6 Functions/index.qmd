@@ -1,0 +1,102 @@
+---
+title: "Week 6 Functions"
+author: "Noah"
+date: "2023-03-08"
+categories: [Functions]
+image: "image.jpg"
+---
+
+```{r}
+x<-1:5
+for (i in x) {
+  print(i)}
+```
+
+```{r}
+x<-1:5
+for (matt in x) {
+  print(i)}
+```
+
+###The rm() function is used to remove a defined variable in the enviorment
+
+#Functions
+
+```{r}
+function_name<- function(input1,input2){
+  #code here 
+  retrun(something)
+}
+
+```
+
+```{r}
+print_hello_world<-function(){
+  return(print("Hello World"))
+}
+print_hello_world()
+```
+
+```{r}
+return_input <- function(input){
+  return(input)
+}
+
+ return_input(input = 5)
+
+ return_input(5)
+
+```
+
+```{r}
+add_one <- function(my_number){
+  temp <- my_number + 1
+    return(temp)
+}
+
+add_one(10)
+```
+
+```{r}
+add_three <- function(value1,value2,value3){
+  sum <- value1+value2+value3
+  return(sum)
+}
+add_three(1,5,11)
+```
+
+```{r}
+c("my","name","is")
+
+paste("my","name","is")
+```
+
+```{r}
+paste(c("my","name","is"),collapse =" ")
+```
+
+```{r}
+1+5/2
+(1+5)/2
+```
+
+```{r}
+# solution 1
+solution <-1:100
+
+# solution 2
+a<-c()
+for (i in 1:100) {
+a[i] <- i 
+}
+a
+
+#solution 3
+i <- 0
+a<-c()
+while(i<=100){
+  i<- i+1
+  a[i]<i
+}
+a
+```

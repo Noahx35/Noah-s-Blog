@@ -2,6 +2,8 @@
 title: "Week 4 Data Vis"
 ---
 
+## date: "2023-01-05"
+
 ### 
 
 1.  Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge
@@ -90,7 +92,4 @@ ggplot()
 ggplot(survey_data,aes(x= wait_time, y=satisfaction,)) + geom_point(color="black", size = 5)+ geom_point(color="blue",size= 3) + geom_smooth(method = "lm") + geom_smooth()
 
 ggplot(survey_data,aes(x= wait_time, y=satisfaction, color= satisfaction)) +geom_point()
-```
-
-```{}
 ```

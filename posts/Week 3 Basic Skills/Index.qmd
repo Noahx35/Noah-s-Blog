@@ -1,6 +1,7 @@
 ---
 title: "Week 3 Basic Skills"
 author: "Noah"
+date: "2023-01-04"
 eval: true
 echo: true
 ---
