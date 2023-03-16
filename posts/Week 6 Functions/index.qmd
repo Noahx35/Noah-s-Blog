@@ -2,8 +2,6 @@
 title: "Week 6 Functions"
 author: "Noah"
 date: "2023-03-08"
-categories: [Functions]
-image: "image.jpg"
 ---
 
 ```{r}
