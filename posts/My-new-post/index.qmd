@@ -1,5 +1,5 @@
 ---
-title: "My new post"
+title: "My First post"
 author: "Noah"
 date: "2023-01-02"
 categories: [news, code, analysis]
