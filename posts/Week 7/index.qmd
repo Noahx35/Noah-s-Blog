@@ -3,7 +3,6 @@ title: "Week 7: More gg_plot"
 author: "Noah"
 date: "2023-13-03"
 categories: [news, code, analysis]
-image: "image.jpg"
 ---
 
 ```{r}
@@ -39,8 +38,9 @@ ggplot(student_grades, aes(x=students, y=grades))+
 
   
 ```
-#Week 7 Day 2
-###FizzBuzz
+
+#Week 7 Day 2 ###FizzBuzz
+
 ```{r}
 for (i in 1:100){
   if(i %% 3 == 0 & i %% 5 == 0) {
@@ -56,9 +56,11 @@ for (i in 1:100){
     print(i)
 }}
 ```
+
 ```{r}
 sum(1:100)
 ```
+
 ```{r}
 a <- 0
 for (i in 1:100){
@@ -66,10 +68,13 @@ for (i in 1:100){
 }
 a
 ```
-###Sum between 2 numbers 
+
+###Sum between 2 numbers
+
 ```{r}
 sum(50:100)
 ```
+
 ```{r}
 a <- 0
 for (i in 50:100){
@@ -77,6 +82,7 @@ for (i in 50:100){
 }
 a
 ```
+
 ```{r}
 Sum_sequence <- function(min,max){
   return(sum(min:max))
@@ -95,16 +101,18 @@ Sum_sequence_loop <- function(min,max){
  Sum_sequence_loop(50,100)
 
 ```
+
 #Generate 100 random numbers
+
 ```{r}
 random_numbers<-runif(n=1000, min=0,max=1000)
 hist(random_numbers)
 ```
+
 ```{r}
-normal_numbers<-rnorm(n=1000,min=0,max=1000)
+#normal_numbers<-rnorm(n=1000,min=0,max=1000)
 ```
 
 ```{r}
 sample(1:6,1)
 ```
-

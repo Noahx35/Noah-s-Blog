@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-01-04">
 
 <title>Noah’s Blog - Week 4 Data Vis</title>
 <style>
@@ -174,6 +175,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 4, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -189,8 +196,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
 <ol type="1">
 <li><p>Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge</p></li>
 <li><p>Tidy Data: Show that you understand what this means. Give an example of data this is in tidy format, and data that is not.</p></li>
@@ -279,7 +284,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "1"</code></pre>
 </div>
 </div>
-</section>
 <section id="vector" class="level3">
 <h3 class="anchored" data-anchor-id="vector">VECTOR</h3>
 <div class="cell">
@@ -296,20 +300,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print to view</span></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>my_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  a     b     random
-1 1   one 0.41639431
-2 2   two 0.06774902
-3 3 three 0.67732853
-4 4  four 0.60505878
-5 5  five 0.31660665</code></pre>
+<pre><code>  a     b    random
+1 1   one 0.7288840
+2 2   two 0.7332026
+3 3 three 0.6275594
+4 4  four 0.1476724
+5 5  five 0.6400597</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Access parts of the table</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">1</span>,] <span class="co"># row 1, all columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  a   b    random
-1 1 one 0.4163943</code></pre>
+<pre><code>  a   b   random
+1 1 one 0.728884</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>my_df[,<span class="dv">1</span>] <span class="co"># column 1, all rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -317,7 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># row 1 and 2 and column 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.41639431 0.06774902</code></pre>
+<pre><code>[1] 0.7288840 0.7332026</code></pre>
 </div>
 </div>
 <p>#ggplot</p>
@@ -371,7 +375,6 @@ dttm (1): call_start
 <p><img src="Index_files/figure-html/unnamed-chunk-8-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<pre><code></code></pre>
 
 
 </section>

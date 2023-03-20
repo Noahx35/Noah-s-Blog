@@ -3,7 +3,6 @@ title: "Week 6 Data Summary"
 author: "Noah"
 date: "2023-03-06"
 categories: [news, code, analysis]
-image: "image.jpg"
 ---
 
 ```{r setup, include=FALSE}
