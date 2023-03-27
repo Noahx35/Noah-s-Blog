@@ -250,7 +250,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">min_favs =</span> <span class="fu">min</span>(favorite_count),</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">max_favs =</span> <span class="fu">max</span>(favorite_count))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>###Log Scale</p>
+<section id="log-scale" class="level3">
+<h3 class="anchored" data-anchor-id="log-scale">Log Scale</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tweets, <span class="fu">aes</span>(<span class="at">x =</span> favorite_count)) <span class="sc">+</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>) <span class="sc">+</span></span>
@@ -310,7 +311,9 @@ $ min_date    &lt;dttm&gt; 2021-10-10 00:10:02
 $ max_date    &lt;dttm&gt; 2021-10-12 20:12:27</code></pre>
 </div>
 </div>
-<p>###Inline coding</p>
+</section>
+<section id="inline-coding" class="level3">
+<h3 class="anchored" data-anchor-id="inline-coding">Inline coding</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>date_from <span class="ot">&lt;-</span> tweet_summary<span class="sc">$</span>min_date <span class="sc">%&gt;%</span> </span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">format</span>(<span class="st">"%d %B, %Y"</span>)</span>
@@ -361,6 +364,7 @@ $ max_date    &lt;dttm&gt; 2021-10-12 20:12:27</code></pre>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

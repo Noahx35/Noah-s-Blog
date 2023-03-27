@@ -3,6 +3,7 @@ title: "Week 7: More gg_plot"
 author: "Noah"
 date: "2023-13-03"
 categories: [news, code, analysis]
+image: "image.jpg"
 ---
 
 ```{r}

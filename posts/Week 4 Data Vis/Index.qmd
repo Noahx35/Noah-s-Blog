@@ -1,6 +1,7 @@
 ---
 title: "Week 4 Data Vis"
 date: "2023-01-04"
+image: "image.jpg wk4.jpg"
 ---
 
 1.  Data types: Show that you understand what is available to you in R. Note also, this goal overlaps with part of the midterm project. See the appendix on Data Types in the textbook for help. Write notes and R code chunks to demonstrate your knowledge

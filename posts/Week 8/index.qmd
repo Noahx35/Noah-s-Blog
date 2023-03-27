@@ -1,0 +1,100 @@
+
+### Filtering Joins
+
+# Being able to filter the rows you want from your data.
+
+```{r}
+full_data <- full_join(customers, orders, by = "id")
+full_data %>%
+  filter(items > 10)
+
+full_data %>%
+  filter(items>21,postcode == "AB38 7RY")
+```
+
+```{r}
+full_data%>%
+  filter(is.na(city)==FALSE)
+```
+
+# Day 2
+
+### Writing your own functions
+
+```{r}
+## mean
+some_numbers <- 1:10
+
+mean(some_numbers)
+
+#Writing your own
+mean_A <- function(x){
+  return(sum(x)/length(x))
+  mean_A(some_numbers)}
+
+  x = 1:15
+mean_B <- function(x){
+  for(i in x)
+    a<- i
+}
+```
+
+```{r}
+  x <- 1:10
+temp_sum<-0
+temp_length<-0
+  for(i in x){
+    temp_sum <- temp_sum + i
+    temp_length <- temp_length + 1
+  }
+
+temp_sum/temp_length
+
+#Made into a function
+
+mean_B<- function(x)
+  temp_sum<-0
+  temp_length<-0
+    for(i in x){
+     temp_sum <- temp_sum + i
+     temp_length <- temp_length + 1
+     print(temp_sum/temp_length)
+  }
+ print(temp_sum/temp_length)
+
+
+```
+
+```{r}
+Numbers<-c(1,1,1,1,1,2,3,4,5)
+a<- 0
+b<- 0
+c<- 0
+d<- 0
+e<- 0
+  for(i in Numbers){
+      if(i==1){a+1}else
+      if(i==2){b+1}else
+      if(i==3){c+1}else
+      if(i==4){d+1}else
+      if(i==5){e+1}}
+print(b)
+
+```
+
+Min and Max Bubble sort
+
+```{r}
+b <- c(2,3,4,3,5,6,7,8,2,21,46,5,23,23,54,67,54,24,78)
+bubble_SORT <- function(x){
+  swap<-0
+  for(i in 2:length(x)){
+    if(x[i] < x[i-1]){
+      x[i-1] <- x[i]
+      x[i]<- x[i-1]
+      swap <- swap +1
+    }}
+return(x)
+}
+bubble_SORT(b)
+```

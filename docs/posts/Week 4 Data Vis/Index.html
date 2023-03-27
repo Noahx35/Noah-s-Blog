@@ -301,19 +301,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>my_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  a     b    random
-1 1   one 0.7288840
-2 2   two 0.7332026
-3 3 three 0.6275594
-4 4  four 0.1476724
-5 5  five 0.6400597</code></pre>
+1 1   one 0.2029983
+2 2   two 0.1615871
+3 3 three 0.3115725
+4 4  four 0.7890571
+5 5  five 0.4435256</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Access parts of the table</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">1</span>,] <span class="co"># row 1, all columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  a   b   random
-1 1 one 0.728884</code></pre>
+<pre><code>  a   b    random
+1 1 one 0.2029983</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>my_df[,<span class="dv">1</span>] <span class="co"># column 1, all rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -321,7 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># row 1 and 2 and column 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.7288840 0.7332026</code></pre>
+<pre><code>[1] 0.2029983 0.1615871</code></pre>
 </div>
 </div>
 <p>#ggplot</p>

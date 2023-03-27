@@ -1,0 +1,16 @@
+{
+  "hash": "07d0816ff842320b9cb38f3dd5e1b91c",
+  "result": {
+    "markdown": "---\ntitle: \"Week 9\"\nauthor: \"Noah\"\ndate: \"2023-27-03\"\nimage: \"image.jpg\"\n---\n\n\n# Video Game Review Report\n\n\n::: {.cell}\n\n:::\n\n# Number of reviews per year\nThe below histogram shows the number of video game reviews submitted to Amazon by year. From 1999 reviews largely increased year-on-year which is unsurprising given the growth of Amazon and access to the internet. The dataset shows the peak number of reviews was 2015 with a decline from 2016 to 2018. It is likely that this reflects the dataset being incomplete for recent years rather than the number of reviews declining in reality.\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -4,11 +4,12 @@ author: "Noah"
 eval: true
 echo: true
 date: "2023-02-28"
+image: "image.jpg wk5.jpg"
 ---
 
 # Week 5 Assignment
 
-\###"Write your blog post, and submit the link to this assignment on blackboard. Blog post ideas will be discussed in class, and this assignment will be updated for clarity.
+### "Write your blog post, and submit the link to this assignment on blackboard. Blog post ideas will be discussed in class, and this assignment will be updated for clarity.
 
 ```{r setup, include=FALSE}
 

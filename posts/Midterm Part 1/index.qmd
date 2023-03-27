@@ -1,0 +1,81 @@
+---
+title: "Midterm Part 1"
+author: "Noah"
+date: "2023-01-01"
+---
+Write a blog post where you demonstrate your ability to use these basic programming concepts in R.
+
+1. R objects: show that you understand and can create/use objects of various types, including at least: character/string, numeric, integer, logical, data.frame, and list. Show that you can index objects appropriately (e.g., locate elements of an object, change elements of an object etc.)
+
+```{r}
+class("This is a string") #Character
+class(3.5) #Numeric
+class(as.integer((3))) # Integer
+my_list <- list(1,2,3,4,5) 
+class(my_list) #List
+class(3>1) # Logical
+```
+Data Frame
+```{r}
+# Create a data frame
+sal_data<- data.frame( 
+staff=c(1,2,3,4),
+monthly_salary = c(4000,8000,3000,5000),
+name =c("Sam", "Dan", "David", "Adam"),
+age = c(23,54,18,28)
+)
+
+print(sal_data)
+```
+
+
+2. Logical operations: show that you understand and can use logical operators in R (e.g., == | > < >= <=)
+```{r}
+1<3  # Should = TRUE
+3>1  # Should = FALSE
+3==3 # Should = TRUE
+1==2 # Should = FALSE
+3>=3 # Should = TRUE
+3<=1 # Should = FALSE
+3>1 | 3<1 # Should = TRUE as only one statement has to be true "| = or"
+```
+
+
+3. Loops: Show that you understand the components of a for loop, and that you can use a for loop.
+
+```{r}
+Num = 1:10
+for (i in Num)
+  print(i)
+```
+```{r}
+Num = 1:10
+for (i in Num){
+  if (i == 7){
+    break}
+  print(i)}
+```
+
+4. Functions: Show that you understand the syntax for declaring your own function, and that you can declare and run your own custom function to accomplish some task (you choose what the function does).
+
+Converting Pounds to Kilogram
+```{r}
+P_to_K<-function(lbs){
+  Kg<- lbs * 0.45359237 
+  paste(Kg,"Kg")
+  
+}
+
+P_to_K(34)
+```
+Converting Kilograms to Pounds
+```{r}
+K_to_P<-function(Kg){
+  lbs<- Kg * 2.20462
+  paste(lbs,"lbs")
+  
+}
+
+K_to_P(10)
+```
+

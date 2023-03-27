@@ -2,6 +2,7 @@
 title: "Week 6 Functions"
 author: "Noah"
 date: "2023-03-08"
+image: "image.jpg wk6.2.jpg"
 ---
 
 ```{r}
@@ -16,9 +17,9 @@ for (matt in x) {
   print(i)}
 ```
 
-###The rm() function is used to remove a defined variable in the enviorment
+### The rm() function is used to remove a defined variable in the environment.
 
-#Functions
+# Functions
 
 ```{r}
 function_name<- function(input1,input2){
