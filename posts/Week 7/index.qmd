@@ -40,7 +40,9 @@ ggplot(student_grades, aes(x=students, y=grades))+
   
 ```
 
-#Week 7 Day 2 ###FizzBuzz
+# Week 7 Day 2
+
+### FizzBuzz
 
 ```{r}
 for (i in 1:100){
@@ -70,7 +72,7 @@ for (i in 1:100){
 a
 ```
 
-###Sum between 2 numbers
+### Sum between 2 numbers
 
 ```{r}
 sum(50:100)

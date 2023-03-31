@@ -1,0 +1,170 @@
+---
+title: "Midterm Part 2"
+author: "Noah"
+date: "2023-01-01"
+---
+
+1.  Do simple math with numbers, addition, subtraction, multiplication, division
+
+```{r}
+1+1 
+4-2
+8/2
+3*3
+```
+
+2.  Put numbers into variables, do simple math on the variables
+
+```{r}
+household_salary <- data.frame(
+  household = c("Sister", "Me", "Borther", "Mom", "Dad"),
+  monthly_salary = c(4000, 5000, 7000, 6000, 8000)
+)
+sum_salary<- sum(household_salary$monthly_salary)
+print(household_salary)
+```
+
+```{r}
+print(sum_salary)
+household_N = (NROW(household_salary$household))
+average_salary = sum_salary/household_N
+print(average_salary)
+```
+
+3.  Write code that will place the numbers 1 to 100 separately into a variable using for loop. Then, again using the seq function.
+
+```{r}
+# solution 1
+solution <-1:100
+
+# solution 2
+a<-c()
+for (i in 1:100) {
+a[i] <- i 
+}
+a
+
+#solution 3
+i <- 0
+a<-c()
+while(i<=100){
+  i<- i+1
+  a[i]<i
+}
+a
+```
+
+4.  Find the sum of all the integer numbers from 1 to 100.
+
+-   you can use the [`sum()`](https://rdrr.io/r/base/sum.html) function on a vector of numbers
+
+-   How would you do this without using the sum function? For example, how could you use a for loop to accomplish this task?
+
+```{r}
+# Solution 1
+sum(1:100)
+
+# Solution 2
+a <- 0
+for (i in 1:100){
+  a <- a+i
+}
+a
+```
+
+5.  Write a function to find the sum of all integers between any two values.
+
+```{r}
+Sum_sequence_loop <- function(min,max){
+  a<-0
+  for (i in min:max){
+    a<-a+i
+  }
+  return(a)
+}
+ Sum_sequence_loop(50,100)
+```
+
+# Fizz Buzz
+
+List the numbers from 1 to 100 with the following constraints. If the number can be divided by three evenly, then print Fizz instead of the number. If the number can be divided by five evenly, then print Buzz instead of the number. Finally, if the number can be divided by three and five evenly, then print FizzBuzz instead of the number. {r}
+
+```{r}
+for (i in 1:100){
+  if(i %% 3 == 0 & i %% 5 == 0) {
+    print("FizzBuzz")
+    } 
+  else if (i %% 3==0) {
+    print("Fizz")
+    } 
+  else if (i %% 5==0) {
+    print("Buzz")
+    } 
+  else{
+    print(i)
+}}
+```
+# Snakes and Ladders
+```{r}
+roll <-sample(c(1:6),1)
+
+total_sum<-0
+num_rolls <- 0
+while(total_sum < 25){
+  num_rolls <- num_rolls +1
+total_sum<-total_sum + roll
+}
+num_rolls
+```
+
+```{r}
+sum_rolls <- c()
+for (i in 1:1000){
+  total_sum<-0
+  num_rolls <- 0
+  while (total_sum< 25){
+    num_rolls <- num_rolls +1
+    total_sum <- total_sum+ sample(c(1,2,3,4,5,6),1)
+  }
+sum_rolls[i] <-num_rolls
+}
+mean(sum_rolls)
+```
+
+```{r}
+set.seed(123)
+snake_and_ladders <- function(){
+  square <- 0
+  rolls  <- 0
+  while (square < 25){
+    roll <- sample(1:6, 1, replace = TRUE)
+    square <- square + roll
+    if (square %in% c(3, 6, 9, 10)) {
+      square <- square + c(11,17,18,12)[which(c(3, 6, 9, 10) == square)]
+    }
+    if (square %in% c(14,19,22,24)) {
+      square <- square - c(4,8,20,16)[which(c(14,19,22,24) == square)]
+    }
+    if (square > 25) {
+      square <- square - roll
+    }
+    rolls <- rolls + 1
+    }
+return(rolls)
+    }
+
+
+num_interations <- 1000
+results <- replicate(num_interations, snake_and_ladders())
+mean(results)
+
+```
+
+```{r}
+function(){
+rolls <- sample(1:6, size = 2, replace = TRUE)
+sum_roll = sum(rolls) 
+sum_roll
+```
+
+
