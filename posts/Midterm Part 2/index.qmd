@@ -3,6 +3,10 @@ title: "Midterm Part 2"
 author: "Noah"
 date: "2023-01-01"
 ---
+```{r}
+library(tidyverse)
+```
+
 
 1.  Do simple math with numbers, addition, subtraction, multiplication, division
 
@@ -137,7 +141,7 @@ snake_and_ladders <- function(){
   square <- 0
   rolls  <- 0
   while (square < 25){
-    roll <- sample(1:6, 1, replace = TRUE)
+    roll <- sample(1:6, 1)
     square <- square + roll
     if (square %in% c(3, 6, 9, 10)) {
       square <- square + c(11,17,18,12)[which(c(3, 6, 9, 10) == square)]
@@ -159,12 +163,27 @@ results <- replicate(num_interations, snake_and_ladders())
 mean(results)
 
 ```
+# Frequency Counts
+```{r}
+a<-"this is some randome text"
+table(unlist(strsplit(a,split="")))
+
+```
 
 ```{r}
-function(){
-rolls <- sample(1:6, size = 2, replace = TRUE)
-sum_roll = sum(rolls) 
-sum_roll
+letters<- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+numbers<- c(1:26)
+num_let<- data.frame(letters,numbers)
+num_let
+ran_string <- "this is just some random text"
+unique_let <- unique(unlist(strsplit(ran_string,split="")))
+
+group_by(unique_let)       
 ```
+```{r}
+unique_let
+```
+
+
 
 

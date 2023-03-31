@@ -46,9 +46,10 @@ ggplot(reviews_by_year, aes(year,counts))+
 # Day 2
 
 ## Verified users
+
 The dataset contains details of whether the review was based on a verified purchase. From [Amazon Community](https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=G75XTB7MBMBTXP6W:)
 
-> An “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.
+> An "Amazon Verified Purchase" review means that we've verified that the person writing the review purchased the product from Amazon, and didn't receive the product at a big discount. Reviews that are not marked "Amazon Verified Purchase" are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.
 
 ```{r, echo=FALSE}
 #| tbl-cap: "Table 1. Number of reviews by purchase status"
@@ -85,6 +86,7 @@ ggplot(reviews_by_year, aes(year,counts,
   )
 
 ```
+
 ```{r}
 options(scipen=999)
 reviews_by_rating <- review_data %>% 
@@ -104,9 +106,10 @@ ggplot(reviews_by_rating, aes(rating,counts))+
                                     color = "black")
   )
 ```
-# By purchase status
-However, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.
 
+# By purchase status
+
+However, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.
 
 ```{r}
 verified_by_rating <- review_data %>% 
@@ -128,4 +131,3 @@ ggplot(reviews_by_year, aes(rating,counts,
                                     color = "black"),
                                
 ```
-
