@@ -171,18 +171,20 @@ table(unlist(strsplit(a,split="")))
 ```
 
 ```{r}
+
 letters<- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
 numbers<- c(1:26)
 num_let<- data.frame(letters,numbers)
 num_let
 ran_string <- "this is just some random text"
-unique_let <- unique(unlist(strsplit(ran_string,split="")))
+split_string <- strsplit(ran_string, split = "")
+unlist_let<-unlist(split_string)
+let.df<- data_frame(unlist_let)
+let.df %>% count(unlist_let,sort = TRUE)
+```
 
-group_by(unique_let)       
-```
-```{r}
-unique_let
-```
+
+
 
 
 
