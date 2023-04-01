@@ -171,7 +171,7 @@ table(unlist(strsplit(a,split="")))
 ```
 
 ```{r}
-
+#Took for ever
 letters<- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
 numbers<- c(1:26)
 num_let<- data.frame(letters,numbers)
