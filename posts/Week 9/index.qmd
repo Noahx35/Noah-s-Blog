@@ -52,12 +52,13 @@ The dataset contains details of whether the review was based on a verified purch
 > An "Amazon Verified Purchase" review means that we've verified that the person writing the review purchased the product from Amazon, and didn't receive the product at a big discount. Reviews that are not marked "Amazon Verified Purchase" are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.
 
 ```{r, echo=FALSE}
-#| tbl-cap: "Table 1. Number of reviews by purchase status"
+#| tbl-cap: "Table 2. Average ratings by purchase status"
 
+# Get boith mean and median by verified users
 
 verified_reviews <- review_data %>% 
   group_by(verified) %>%
-  summarize(counts = n())
+  summarize(count = n())
 
 knitr::kable(verified_reviews)
 ```
@@ -65,25 +66,30 @@ knitr::kable(verified_reviews)
 Whilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.
 
 ```{r}
-verified_by_year <- review_data %>% 
+year_by_verified_counts <- review_data %>%
   group_by(year,verified) %>%
   summarize(counts = n())
+#ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))
+#ggplot(reviews_by_year, aes(x=year, y=counts))
 # plot
-ggplot(reviews_by_year, aes(year,counts, 
-                            fill=verified))+
-  geom_bar(stat= "identity",color="black")+
-  ggtitle(label = "Number of reviews per year",subtitle = "By purchase status")+
-  scale_x_continuous(breaks = 1999:2018) +
-  theme_grey()+
-  theme(plot.title = element_text(face = "bold"))+
+ggplot(data = year_by_verified_counts, 
+       mapping = aes(x=year, 
+                     y=counts, 
+                     group = verified,
+                     fill = verified))+
+  geom_bar(stat= "identity")+
+  scale_x_continuous(breaks = 1999:2018)+
+  theme(axis.text.x = element_text(angle = 85, vjust = 1, hjust=1))+
   xlab("")+
   ylab("")+
-  theme(axis.text.x = element_text(angle= 90, vjust = 0.5, hjust=1))+ 
+  ggtitle("Number of reviews per year",
+          subtitle = "By purchase status")+
   theme(
-    panel.background = element_rect(fill="lightgrey", 
-                                    color = "black"),
-                               
-  )
+    panel.background = element_rect(fill = "lightgrey",
+                                colour = "lightgrey",
+                                linewidth = 0.5, linetype = "solid"),
+    panel.grid.major=element_line(colour="black",linewidth = .05),
+    panel.grid.minor=element_line(colour="lightgrey"))
 
 ```
 
@@ -112,22 +118,45 @@ ggplot(reviews_by_rating, aes(rating,counts))+
 However, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.
 
 ```{r}
-verified_by_rating <- review_data %>% 
+rating_by_verified_counts <- review_data %>%
   group_by(rating,verified) %>%
   summarize(counts = n())
+#ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))
+#ggplot(reviews_by_year, aes(x=year, y=counts))
 # plot
-ggplot(reviews_by_year, aes(rating,counts,
-                            group_by(verified)
-                            fill=verified))+
-  geom_bar(stat= "identity",color="black")+
-  ggtitle(label = "Number of reviews per year",subtitle = "By purchase status")+
-  scale_x_continuous(breaks = 1999:2018) +
-  theme_grey()+
-  theme(plot.title = element_text(face = "bold"))+
+ggplot(data = rating_by_verified_counts, 
+       mapping = aes(x=rating, 
+                     y=counts, 
+                     group = verified,
+                     fill = verified))+
+  geom_bar(stat= "identity", position = "dodge")+
   xlab("")+
   ylab("")+
+  ggtitle("Review Ratings",
+          subtitle = "By purchase status")+
   theme(
-    panel.background = element_rect(fill="lightgrey", 
-                                    color = "black"),
-                               
+    panel.background = element_rect(fill = "lightgrey",
+                                colour = "lightgrey",
+                                linewidth = 0.5, linetype = "solid"),
+    panel.grid.major=element_line(colour="black",linewidth = .05),
+    panel.grid.minor=element_line(colour="lightgrey"))
+
 ```
+# Average Rating 
+
+## By Purchase Status
+
+Average ratings
+By purchase status
+Average ratings for verified reviews were higher (both mean and median) than for unverified review, likely driven by the number of 5-star reviews for verified reviews.
+```{r}
+verified_descriptives <- review_data %>% 
+  group_by(verified) %>%
+  summarize(`Mean rating` = round(mean(rating), digits=2),
+            `Median rating` = median(rating))
+
+
+knitr::kable(verified_descriptives)
+
+```
+
