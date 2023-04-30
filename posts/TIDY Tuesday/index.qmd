@@ -1,0 +1,24 @@
+---
+title: "TIDT Tuesday "
+author: "Noah"
+date: "2023-26-04"
+image: "image.jpg"
+---
+```{r}
+```
+
+# Class Practice 
+
+```{r}
+# Only install once
+# remotes::install_github("nrennie/LondonMarathon")
+```
+```{r}
+data(winners, package = "LondonMarathon")
+data(london_marathon, package = "LondonMarathon")
+```
+
+```{r}
+
+```
+
