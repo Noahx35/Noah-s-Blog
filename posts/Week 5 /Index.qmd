@@ -3,7 +3,7 @@ title: "Week 5 Data Import "
 author: "Noah"
 eval: true
 echo: true
-date: "2023-02-28"
+date: "2023-01-06"
 image: "image.jpg wk5.jpg"
 ---
 
@@ -21,7 +21,7 @@ library(googlesheets4) # for Google Sheets
 
 ```
 
-###Ways to view your dATA
+### Ways to view your DATA
 
 ```{r}
 #data() , allows you to view all the data sets
@@ -32,7 +32,7 @@ library(googlesheets4) # for Google Sheets
 #summary(cars), gives basic info min, max, mean, median, 1st ,and 3rd interquartile range
 ```
 
-###Summarytools
+### Summarytools
 
 ```{r}
 #library(summarytools)
@@ -75,7 +75,7 @@ spec(demo)
 glimpse(demo)
 ```
 
-###Google Sheet Load Google SHeet
+### Google Sheet Load Google SHeet
 
 ```{r}
 gs4_deauth() # skip authorisation for public data
@@ -101,10 +101,10 @@ avatar <- tibble(
 avatar
 ```
 
-###Export Data
+### Export Data
 
 ```{r}
 #export(avatar, "data/avatar.csv")
 ```
 
-###Writing Data
+### Writing Data

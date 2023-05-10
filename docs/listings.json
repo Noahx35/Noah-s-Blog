@@ -2,24 +2,25 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Week 9/index.html",
-      "/posts/TIDY Tuesday/index.html",
+      "/posts/Week 13/index.html",
+      "/posts/Week 12/index.html",
       "/posts/Week 11/index.html",
-      "/posts/Week 8/index.html",
       "/posts/Week 10/index.html",
+      "/posts/Week 9/index.html",
+      "/posts/Week 8/index.html",
       "/posts/Week 7/index.html",
-      "/posts/Week 6 Functions/index.html",
       "/posts/Week 6 Data Summary/index.html",
+      "/posts/Week 6 Functions/index.html",
       "/posts/Week 5 (Midterm tips)/index.html",
       "/posts/Week 5 /Index.html",
-      "/posts/Week 12/index.html",
       "/posts/Week 4 Data Vis/Index.html",
       "/posts/Week 3 Basic Skills/Index.html",
       "/posts/TIP Sheet Wk 2/index.html",
       "/posts/My-new-post/index.html",
+      "/posts/TIDY Tuesday/index.html",
+      "/posts/Midterm Part 2/index.html",
       "/posts/Midterm Part 1/index.html",
-      "/posts/welcome/index.html",
-      "/posts/Midterm Part 2/index.html"
+      "/posts/welcome/index.html"
     ]
   }
 ]

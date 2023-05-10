@@ -1,7 +1,7 @@
 ---
 title: "Midterm Part 2"
 author: "Noah"
-date: "2023-01-01"
+date: "2022-12-02"
 ---
 ```{r}
 library(tidyverse)

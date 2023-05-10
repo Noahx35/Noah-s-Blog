@@ -1,0 +1,14 @@
+{
+  "hash": "ade8168fa27013ace3bfc1fd425cc909",
+  "result": {
+    "markdown": "---\ntitle: \"TIDT Tuesday \"\nauthor: \"Noah\"\ndate: \"2022-12-04\"\nimage: \"image.jpg\"\n---\n\n::: {.cell}\n\n:::\n\n\n# Class Practice \n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Only install once\n# remotes::install_github(\"nrennie/LondonMarathon\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndata(winners, package = \"LondonMarathon\")\ndata(london_marathon, package = \"LondonMarathon\")\n```\n:::\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

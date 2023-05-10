@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Noah">
-<meta name="dcterms.date" content="2023-03-01">
+<meta name="dcterms.date" content="2023-01-07">
 
 <title>Noah’s Blog - Week 5: Basic Syntax</title>
 <style>
@@ -185,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 1, 2023</p>
+        <p class="date">January 7, 2023</p>
       </div>
     </div>
     
@@ -223,7 +223,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] FALSE  TRUE FALSE</code></pre>
 </div>
 </div>
-<p>###Not Equal to</p>
+</section>
+<section id="not-equal-to" class="level3">
+<h3 class="anchored" data-anchor-id="not-equal-to">Not Equal to</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">1</span> <span class="co"># is 1 equal to 1?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -242,7 +244,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1]  TRUE FALSE  TRUE</code></pre>
 </div>
 </div>
-<p>###Greater than or less than</p>
+</section>
+<section id="greater-than-or-less-than" class="level3">
+<h3 class="anchored" data-anchor-id="greater-than-or-less-than">Greater than or less than</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">1</span> <span class="co"># is 1 greater than 1?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -306,7 +310,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1]  TRUE  TRUE FALSE</code></pre>
 </div>
 </div>
-<p>###And</p>
+</section>
+<section id="and" class="level3">
+<h3 class="anchored" data-anchor-id="and">And</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#is 16 divisible by 4 AND 8</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="sc">%%</span> <span class="dv">4</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> <span class="dv">16</span> <span class="sc">%%</span> <span class="dv">8</span> <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -324,7 +330,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>###OR</p>
+</section>
+<section id="or" class="level3">
+<h3 class="anchored" data-anchor-id="or">OR</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># is 16 divisible by 4 OR 8</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="sc">%%</span> <span class="dv">4</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">16</span> <span class="sc">%%</span> <span class="dv">8</span> <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -364,7 +372,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "A is not 1"</code></pre>
 </div>
 </div>
-<p>###IF and Else in a loop</p>
+</section>
+<section id="if-and-else-in-a-loop" class="level3">
+<h3 class="anchored" data-anchor-id="if-and-else-in-a-loop">IF and Else in a loop</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># make a variable contain 1s and 0s</span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -387,7 +397,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 [1] "I'm a 1"</code></pre>
 </div>
 </div>
-<p>###Breaking a loop</p>
+</section>
+<section id="breaking-a-loop" class="level3">
+<h3 class="anchored" data-anchor-id="breaking-a-loop">Breaking a loop</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">&lt;</span> <span class="dv">5</span>) {</span>
@@ -420,7 +432,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 [1] 5</code></pre>
 </div>
 </div>
-<p>###Repeat Loop</p>
+</section>
+<section id="repeat-loop" class="level3">
+<h3 class="anchored" data-anchor-id="repeat-loop">Repeat Loop</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">0</span></span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="cf">repeat</span> {</span>
@@ -438,7 +452,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 [1] 5</code></pre>
 </div>
 </div>
-<p>###Example 1 ###(Using the value of the iterator to assign in values systematically to another variable.)</p>
+</section>
+<section id="example-1-using-the-value-of-the-iterator-to-assign-in-values-systematically-to-another-variable." class="level3">
+<h3 class="anchored" data-anchor-id="example-1-using-the-value-of-the-iterator-to-assign-in-values-systematically-to-another-variable.">Example 1 ### (Using the value of the iterator to assign in values systematically to another variable.)</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># put 1 into the first five positions of x</span></span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>() <span class="co"># create empty vector</span></span>
@@ -450,7 +466,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] 1 1 1 1 1</code></pre>
 </div>
 </div>
-<p>###Example 2</p>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># put the numbers 1-5 in the first 5 positions of x</span></span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
@@ -462,7 +480,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] 1 2 3 4 5</code></pre>
 </div>
 </div>
-<p>###Example 3 ###Make your own counter, when you need one</p>
+</section>
+<section id="example-3-make-your-own-counter-when-you-need-one" class="level3">
+<h3 class="anchored" data-anchor-id="example-3-make-your-own-counter-when-you-need-one">Example 3 ### Make your own counter, when you need one</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">2</span>)</span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>odd <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>

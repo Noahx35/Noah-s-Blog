@@ -1,7 +1,7 @@
 ---
 title: "Week 5: Basic Syntax"
 author: "Noah"
-date: "2023-03-01"
+date: "2023-01-07"
 image: "image.jpg wk.5.jpg"
 ---
 
@@ -174,7 +174,7 @@ repeat {
 }
 ```
 
-### Example 1 ###(Using the value of the iterator to assign in values systematically to another variable.)
+### Example 1 ### (Using the value of the iterator to assign in values systematically to another variable.)
 
 ```{r}
 # put 1 into the first five positions of x
@@ -198,7 +198,7 @@ x
 
 ```
 
-### Example 3 ###Make your own counter, when you need one
+### Example 3 ### Make your own counter, when you need one
 
 ```{r}
 a <- c(1, 4, 3, 5, 7, 6, 8, 2)
