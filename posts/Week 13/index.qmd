@@ -1,7 +1,207 @@
 ---
-title: "Week 13"
+title: "Tidy Tuesday (All Three)"
 author: "Noah"
 date: "2023-01-15"
 image: "image.jpg"
 
 ---
+
+```{r}
+library(tidyverse)
+library(scales)
+library(dplyr)
+```
+
+### First Tidy Tuesday 
+```{r}
+# Here is the link to the replicated image
+"https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-04-11/pic2.png"
+
+# Read in with tidytuesdayR package 
+# Install from CRAN via: install.packages("tidytuesdayR")
+# This loads the readme and all the datasets for the week of interest
+
+# Either ISO-8601 date or year/week works!
+
+eggdata <- tidytuesdayR::tt_load('2023-04-11')
+eggdata <- tidytuesdayR::tt_load(2023, week = 15)
+```
+
+```{r}
+Byyear<-separate(eggdata$`cage-free-percentages`,observed_month, sep = "-", into = c("year", "Month-Day"))
+
+gp_by_year <- Byyear %>% 
+  group_by(year)
+#Egg Year + Month col.
+Egg_Y_M<-unite(gp_by_year, year, `Month-Day`, col = "year_m", sep = "-")
+```
+
+```{r}
+M_ave <- Egg_Y_M %>% 
+group_by(year_m) %>%
+  summarize(Mean_hens= mean(percent_hens))
+
+day<- rep(1,65)
+
+YMD_ave_sep <- data.frame(M_ave,day)
+
+YMD_ave<- data.frame(unite(YMD_ave_sep, year_m,day, col = "YMD", sep = "-"))
+DATEYMD <- data.frame(YMD = as.Date(YMD_ave$YMD,
+                               format = "%Y-%m-%d"),Mean_hens=YMD_ave$Mean_hens)
+DATE1<-data.frame(as.Date(DATEYMD$YMD))
+as.Date(DATEYMD$YMD)
+
+```
+
+
+```{r}
+ggplot(data = DATEYMD,aes(YMD, Mean_hens))+ 
+  geom_line()+  
+  scale_y_continuous(breaks=seq(0,30,5), labels = label_number(suffix = "%"))+
+  scale_x_date(breaks= "1 year", date_labels ="20%y")+
+  xlab(substitute(paste(bold('Date (year)'))))+
+  ylab(substitute(paste(bold("Percentage of US hens in cage-free housing"))))+
+  labs(caption ="
+Figure 2 Percentage of hens in cage-free housing from December 2007 to February 2021 [8]. Data are available at 
+https://osf.io/z2gxn/") +
+  theme(plot.caption.position = "bottom right",
+       plot.caption = element_text(hjust =0 ))+
+  geom_point(size=.5)+
+  theme(axis.text.x = element_text(angle = 0, vjust = 1, hjust=1))+
+  theme_minimal()+
+  theme(
+    panel.grid.major=element_line(colour="black",linewidth = .05),
+    panel.grid.minor=element_line(colour="grey", linewidth = 0.5,))+
+    theme(plot.margin = margin(.6,.1,.6,.17, "in"))
+    
+
+    
+  
+  
+```
+
+### Second Tidy Tuesday 
+```{r}
+# Get the Data
+
+# Read in with tidytuesdayR package 
+# Install from CRAN via: install.packages("tidytuesdayR")
+# This loads the readme and all the datasets for the week of interest
+
+# Either ISO-8601 date or year/week works!
+
+soccerdata<- tidytuesdayR::tt_load('2023-04-04')
+soccerdata <- tidytuesdayR::tt_load(2023, week = 14)
+
+soccer <- soccerdata$soccer
+
+# Or read in the data manually
+
+soccer <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-04-04/soccer21-22.csv')
+
+```
+
+```{r}
+overall_goals<- data.frame(soccer$HomeTeam, soccer$AwayTeam,soccer$FTHG,soccer$FTAG)  
+away_goals<- data.frame(overall_goals[,c(2,4)])
+home_goals<- data.frame(overall_goals[,c(1,3)])
+```
+
+```{r}
+Awayteam_goals <- away_goals %>% 
+  group_by(soccer.AwayTeam) %>%
+  summarise(total_away_goals = sum(soccer.FTAG))
+
+Hometeam_goals <- home_goals %>% 
+  group_by(soccer.HomeTeam) %>%
+  summarise(total_Home_goals = sum(soccer.FTHG))
+
+Home_Away_Goals<- data.frame(Awayteam_goals,Hometeam_goals)
+#reviews_by_year <- review_data %>% 
+  #group_by(year) %>%
+  #summarize(counts = n())
+
+Home_Away_Goals2 <- Home_Away_Goals[,-3]
+
+soccer_data2 <- data.frame(Home_Away_Goals2[,1],(Total_Goals=(Home_Away_Goals2[,2]+Home_Away_Goals2[,3])))
+
+names(soccer_data2)[1] ="team"
+names(soccer_data2)[2] ="goals"
+
+final_soccer_data <- soccer_data2[order(-soccer_data2$goals),] 
+
+
+```
+
+
+```{r}
+
+ggplot(final_soccer_data, aes(reorder(team,goals),goals))+
+  theme_minimal()+
+  geom_col(fill="#7a66ee", colour = "#7a66ee")+
+  xlab("Team")+
+  ylab("Goals")+
+  ggtitle(label = "Goals scored by team during the 2021-22 EPL season")+
+  theme(plot.margin = margin(.05,2.5,.05,.05, "in"))+
+  theme(plot.title = element_text(size = 12, face = "bold"))+
+  theme(
+    panel.grid.major=element_line(colour="white",linewidth = .05),
+    panel.grid.minor=element_line(colour="grey", linewidth = 0.5,))+
+  coord_flip()
+```
+### Third Tidy Tuesday
+```{r}
+# Get the Data
+
+# Read in with tidytuesdayR package 
+# Install from CRAN via: install.packages("tidytuesdayR")
+# This loads the readme and all the datasets for the week of interest
+
+# Either ISO-8601 date or year/week works!
+
+artdata <- tidytuesdayR::tt_load('2023-01-17')
+artdata <- tidytuesdayR::tt_load(2023, week = 03)
+
+arthistory <- tuesdata$arthistory
+
+# Or read in the data manually
+
+artists <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-17/artists.csv')
+
+```
+```{r}
+years <- data.frame(artists$year)
+
+pub_per_year <- years %>% 
+  group_by(artists.year) %>%
+  summarize(counts = n())
+
+names(pub_per_year)[1] ="year"
+#pub_per_year[5,]<-(pub_per_year[5,]+pub_per_year[6,])/2 # mean and then remove row 6
+#pub_per_year[5,]<-(pub_per_year[5,]+pub_per_year[6,])/2
+
+
+pub_per_year2 <- data.frame(pub_per_year[-c(5,6,9,11,12,13,15,17,19),])
+pub_per_year2[nrow(pub_per_year2)+1,]<-c(1988,109)
+pub_per_year2[nrow(pub_per_year2)+1,]<-c(2001,170)
+                           
+
+```
+
+```{r}
+ggplot(pub_per_year2, aes(year,counts))+
+  geom_bar(stat= "identity",fill="darkgreen",color="darkgreen", width = 2.6)+
+  theme_minimal()+
+  theme(panel.grid.major=element_line(colour="black",linewidth = .05),
+    panel.grid.minor=element_line(colour="grey", linewidth = 0.5,))+
+    theme(plot.margin = margin(.8,.2,.8,.2, "in"))+
+  ggtitle(label = "Overall Count of Artists in Gardner's Art Through the Ages")+
+  geom_text(aes(label=counts), position=position_dodge(width=0.9), vjust=-.2,size=3)+
+    theme(plot.title = element_text(size = 16, face = "bold"))+
+   xlab(substitute(paste(bold('Year of Publication'))))+
+  ylab(substitute(paste(bold("Count"))))+
+  scale_y_continuous(breaks=seq(0,200,50))+
+  scale_x_continuous(breaks=seq(1925,2025,25))
+
+```
+
